@@ -38,13 +38,13 @@ app.use("/api/auth", authRouter);
 app.use("/api/listing", listingRouter);
 
 // Serve static files from the build folder
-const frontendBuildPath = path.resolve(__dirname, "..", "frontend", "dist"); // Adjusted path
-app.use(express.static(frontendBuildPath));
+// const frontendBuildPath = path.resolve(__dirname, "..", "frontend", "dist"); // Adjusted path
+// app.use(express.static(frontendBuildPath));
 
-// Serve index.html for any other routes
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(frontendBuildPath, "index.html")); // Adjusted path
-});
+// // Serve index.html for any other routes
+// app.get("*", (req, res) => {
+//   res.sendFile(path.resolve(frontendBuildPath, "index.html")); // Adjusted path
+// });
 
 
 
